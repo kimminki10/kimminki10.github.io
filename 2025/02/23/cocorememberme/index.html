@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    Rememberme (기프티콘 알람 서비스) 개발기 | 김느림의 느린삶
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="
+  project
+  ">
+  
+  <meta name="author" content="pangshe10">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+  
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">This website</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/">Archives</a></li>
+        
+        
+        <li><a href="/">Categories</a></li>
+        
+        
+        <li><a href="/">Tags</a></li>
+        
+        
+        <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li>
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="https://avatars.githubusercontent.com/u/19224364?v=4"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/"
+           class="header-toolbar-right"> 4 </a>
+      </li>
+      <li>
+        <a href="/" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/"
+           class="header-toolbar-right"> 3 </a>
+      </li>
+      <li>
+        <a href="/" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/"
+           class="header-toolbar-right"> 0 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/">김느림의 느린삶</a>
+      
+      
+    </h2>
+  </div>
+
+  <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div>
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    pangshe10
+
+    <span class="post-date float-right" title="{{moment(1740297486000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1740297486000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>Rememberme (기프티콘 알람 서비스) 개발기</h1>
+    <h1 id="소개"><a href="#소개" class="headerlink" title="소개"></a>소개</h1><p>Rememberme는 알람 서비스이다. 핸드폰 속에 스크린샷 형태로 정보를 저장해두는 경우가 많은데 사용 기한이 있는 쿠폰 형태의 경우 사용하지 못하고 지나가버리는 경우가 종종 있어서 이를 잊지않고 사용할 수 있도록 알람을 해주는 서비스를 만들었다.</p>
+<p>쿠폰이 ‘나를 기억해줘’ 라는 서비스이다.</p>
+<h2 id="팀원"><a href="#팀원" class="headerlink" title="팀원"></a>팀원</h2><p><img src="/images/cocorememberme1.png" alt="팀원"></p>
+<p>팀원은 총 8명이었고 나는 홀로 백엔드 개발 담당을 맡았다.</p>
+<h2 id="기술"><a href="#기술" class="headerlink" title="기술"></a>기술</h2><p><img src="/images/cocorememberme2.png" alt="architecture"></p>
+<p>백엔드는 python, FastAPI를 사용해서 개발해 보기로 했다. LangChain 같은 AI 프레임워크들이 FastAPI와 연계가 좋아서 공부해보고 싶은 욕구가 있었고 AI경험이 있는 분이 있었는데 그분은 FastAPI를 공부하고자하는 욕구가 있다고 해서 FastAPI로 하기로 했는데 일을 나누다보니 혼자 하게 되었다.</p>
+<h3 id="스택"><a href="#스택" class="headerlink" title="스택"></a>스택</h3><ul>
+<li>Python3.12</li>
+<li>FastAPI</li>
+<li>MySQL</li>
+<li>Azure Blob Storage</li>
+<li>Azure Web App</li>
+<li>Github Actions</li>
+<li>Azure OpenAI API</li>
+<li>Firebase Cloud Messaging</li>
+</ul>
+<h1 id="개발기"><a href="#개발기" class="headerlink" title="개발기"></a>개발기</h1><p>1달동안 개발하는 프로젝트였는데 설날 주간이 끼어있었고 그 주동안에는 프로젝트를 진행하지 않기로 했다. 나는 설날에 FastAPI 공부를 하기로 했다.</p>
+<h2 id="FastAPI-공부"><a href="#FastAPI-공부" class="headerlink" title="FastAPI 공부"></a>FastAPI 공부</h2><h3 id="공식-홈페이지"><a href="#공식-홈페이지" class="headerlink" title="공식 홈페이지"></a>공식 홈페이지</h3><p>FastAPI를 사용해서 서비스를 만들어 본적이 없어서 공부를 해야겠다고 생각했다. FastAPI 공식 홈페이지 tutorial을 따라서 공부했다.<br><a target="_blank" rel="noopener" href="https://fastapi.tiangolo.com/tutorial/">https://fastapi.tiangolo.com/tutorial/</a></p>
+<h3 id="책"><a href="#책" class="headerlink" title="책"></a>책</h3><p>그 다음 아래 FastAPI로 배우는 백엔드 프로그래밍 with 클린 아키텍처를 읽고 공부를 시작했다. DI를 중심으로 클린 아키텍처를 이해하고 FastAPI를 사용하는 방법을 배웠다. </p>
+<img src="/images/cocorememberme3.png" alt="책" style="width:50%; height:auto;">
+
+<p>출처: <a target="_blank" rel="noopener" href="https://jpub.tistory.com/468775">https://jpub.tistory.com/468775</a> [제이펍의 참 똑똑한 2비트 책 이야기:티스토리]</p>
+<h2 id="CI-CD-설정"><a href="#CI-CD-설정" class="headerlink" title="CI&#x2F;CD 설정"></a>CI&#x2F;CD 설정</h2><p>Github Action 을 사용해서 CI&#x2F;CD를 구성했다. 배포는 Azure Web App을 사용했다. github 랑 azure 모두 MS의 서비스여서 그런지 아주 쉽게 연결할 수 있었다. Backend 개발한 내용을 바로바로 반영해서 Frontend 개발을 하고싶다고 했기 때문에 CI&#x2F;CD부터 설정했다.</p>
+<h2 id="주요-기능-및-모델-CRUD-API-구현"><a href="#주요-기능-및-모델-CRUD-API-구현" class="headerlink" title="주요 기능 및 모델 CRUD API 구현"></a>주요 기능 및 모델 CRUD API 구현</h2><p>주요기능은 다음과 같았다.</p>
+<ol>
+<li>주요기능은 스크린샷에서 정보를 추출하는 기능</li>
+<li>추출한 정보에서 알림을 주는 기능</li>
+</ol>
+<p>유저, 알림, 스크린샷 모델을 만들었다. 각 모델의 CRUD API를 구현하고 Swagger로 문서를 공유했다. 코드에 주석만 달면 추가적인 설정 없이 Swagger 문서가 만들어진다는 것이 좋았다.</p>
+<img src="/images/cocorememberme4.png" alt="swagger" style="width:50%; height:auto;">
+
+<h2 id="테스트-코드-작성"><a href="#테스트-코드-작성" class="headerlink" title="테스트 코드 작성"></a>테스트 코드 작성</h2><p>개발을 계속해서 진행하다보니 수정사항이 있을때 기존의 구현된 내용에 어떤 영향을 미칠지 알 수 없는 상황이 발생했다. 그래서 수정을 하고 나서 모든 API를 테스트 해봐야하는데 API가 많아지니까 테스트하지 않고 넘어가는 상황이 많았다. 결국 사이드이펙트가 빵빵 터졌고 테스트코드를 작성해야할 필요성을 느꼈다. 이 이후에 터지는 문제들은 테스트코드를 작성해서 다시 발생하지 않게 했다.</p>
+<p><img src="/images/cocorememberme5.png" alt="테스트코드 필요성"></p>
+<p>테스트 코드를 작성할 때 테스트용 데이터를 사용하기위해서 디비를 새로 만들었다. 테스트를 시작할 때 테이블을 전부 drop 하고 다시 만들어서 테스트 데이터가 항상 동일할 수 있게 했다.</p>
+<h2 id="FCM-Firebase-Cloud-Messaging-설정"><a href="#FCM-Firebase-Cloud-Messaging-설정" class="headerlink" title="FCM - Firebase Cloud Messaging 설정"></a>FCM - Firebase Cloud Messaging 설정</h2><p>처음으로 FCM을 사용해봐서 사용하는 방법에 대한 학습이 필요했다. FCM 테스트용 클라이언트를 작게 만들어보고 서버에서 알림을 보내보는 식으로 테스트를 해봤다.</p>
+<h2 id="음성-검색-기능"><a href="#음성-검색-기능" class="headerlink" title="음성 검색 기능"></a>음성 검색 기능</h2><p>사용자가 음성으로 자신의 스크린샷을 찾을 수 있는 기능을 구현했다. 사용자 음성을 Azure Cognitive Service를 사용해서 텍스트화하고 입력받은 텍스트를 LLM을 사용해서 키워드로 분리했다. 그 후에 해당 키워드를 검색하여 스크린샷을 찾아서 반환하는 기능을 구현했다.</p>
+<h1 id="후기"><a href="#후기" class="headerlink" title="후기"></a>후기</h1><p>한 달 동안 개발을 해서 짧다면 짧고 길다면 긴 시간동안 개발을 했다. 마지막에는 시간에 쫒겨서 기능만 돌아가게 어떻게든 구현해서 아쉬움이 있다. 그리고 FastAPI를 처음 사용해봤는데 아주 직관적이고 러닝커브가 짧은 것이 장점으로 느껴졌다. 다음번에는 더 좋은 구조로 개발 할 수 있을 것 같다.</p>
+
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="http://kimminki10.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2019 pangshe10</li>
+      <li><a href="http://kimminki10.github.io">Home</a></li>
+      
+      <li><a target="_blank" rel="noopener" href="https://github.com/kimminki10">Github</a></li>
+      
+      <li><a target="_blank" rel="noopener" href="https://linkedin.com/in/pangshe10">Linkedin</a></li>
+      
+    </ul>
+    <div class="footer-theme-info">
+      Theme <a target="_blank" rel="noopener" href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a target="_blank" rel="noopener" href="//github.com/sabrinaluo">Hiitea</a> ❤ Powered by Hexo
+    </div>
+    </div>
+    
+  </footer>
+</div>
+
+
+
+
+<script src="/js/main.js"></script>
+
+</body>
+</html>
